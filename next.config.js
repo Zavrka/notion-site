@@ -9,7 +9,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 /** @type {import('next').NextConfig} */
 const nextConfig = withBundleAnalyzer({
   output: 'export',
-  staticPageGenerationTimeout: 600, // увеличиваем время на сборку
+  staticPageGenerationTimeout: 600,
   reactStrictMode: true,
   images: {
     unoptimized: true,
@@ -32,8 +32,7 @@ const nextConfig = withBundleAnalyzer({
   },
   transpilePackages: ['react-tweet'],
   env: {
-    NOTION_DISABLE_CACHE: 'true',
-    NODE_ENV: 'production'
+    NOTION_DISABLE_CACHE: 'true'
   }
 })
 
